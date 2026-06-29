@@ -27,7 +27,7 @@ SIR_MODEL = {
     "beta": 0.3,               # 感染概率
     "gamma": 0.1,              # 恢复概率
     "initial_infected": 5,     # 初始感染人数
-    "num_steps": 5000,         # Monte Carlo 步数（从 500 增加到 5000）
+    "num_steps": 200000,       # Monte Carlo 步数（确保疾病充分传播）
     "seed": 456,               # 随机种子
 }
 
@@ -38,5 +38,5 @@ SIR_SCAN = {
     "beta_num": 20,            # 扫描点数
     "gamma": 0.1,              # 固定 gamma
     "grid_size": 50,           # 格点尺寸
-    "num_steps": 5000,         # 每个 beta 的 Monte Carlo 步数（从 500 增加到 5000）
+    "num_steps": 200000,       # 每个 beta 的 Monte Carlo 步数（确保充分传播）
 }
