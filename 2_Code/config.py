@@ -24,19 +24,19 @@ RANDOM_WALK_2D = {
 # ============ 模块3：SIR 格点模型参数 ============
 SIR_MODEL = {
     "grid_size": 50,           # L × L 格点，总人口 N = L^2
-    "beta": 0.3,               # 感染概率
+    "beta": 0.6,               # 感染概率（从 0.3 提高到 0.6，确保爆发）
     "gamma": 0.1,              # 恢复概率
-    "initial_infected": 5,     # 初始感染人数
-    "num_steps": 200000,       # Monte Carlo 步数（确保疾病充分传播）
+    "initial_infected": 20,    # 初始感染人数（从 5 提高到 20，降低随机灭绝概率）
+    "num_steps": 200000,       # Monte Carlo 步数
     "seed": 456,               # 随机种子
 }
 
 # ============ SIR 阈值扫描参数 ============
 SIR_SCAN = {
     "beta_min": 0.0,           # 扫描的 beta 最小值
-    "beta_max": 0.5,           # 扫描的 beta 最大值
+    "beta_max": 0.8,           # 扫描的 beta 最大值（从 0.5 扩大到 0.8）
     "beta_num": 20,            # 扫描点数
     "gamma": 0.1,              # 固定 gamma
     "grid_size": 50,           # 格点尺寸
-    "num_steps": 200000,       # 每个 beta 的 Monte Carlo 步数（确保充分传播）
+    "num_steps": 200000,       # 每个 beta 的 Monte Carlo 步数
 }
